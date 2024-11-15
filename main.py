@@ -8,6 +8,7 @@ st.logo('static/logo.png')
 
 
 pages = [
+    st.Page('about.py', title = 'About'),
     st.Page('sales.py', title = 'Sales Report'),
     st.Page('customers.py', title = 'Customers Report'),
     st.Page('products.py', title = 'Products Report')
