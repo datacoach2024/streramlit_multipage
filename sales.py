@@ -1,11 +1,11 @@
 import streamlit as st
-import backend
+import etl
 import plotly.express as px
 
 
 st.title("Sales Report")
 
-tips = backend.load_tips_data()
+tips = etl.load_tips_data()
 
 fig = px.scatter(
     data_frame = tips,

@@ -1,11 +1,11 @@
-import plotly
-import pandas as pd
 import duckdb
+import pandas as pd
 
-tips = plotly.data.tips()
 
-with duckdb.connect("my.db") as duck:
-    try:
-        duck.query("create table tips as select * from tips")
-    except:
-        print('unsuccessful')
+
+def load_tips_data():
+    with duckdb.connect('my.db') as duck:
+        tips = duck.query("select * from tips").to_df()
+    
+    return tips
+
